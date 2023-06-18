@@ -38,7 +38,10 @@ const performCalculations = async () => {
 
   Promise.all(results).then((completedTasks) => {
     console.log(completedTasks);
+  }).finally(() => {
+    process.exit(0);
   })
+
 };
 
 await performCalculations();
